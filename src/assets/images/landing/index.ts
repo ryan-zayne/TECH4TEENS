@@ -4,4 +4,3 @@ export { default as heroBgTwoDesktop } from "./hero-bg-two-desktop.svg";
 export { default as heroBgTwoMobile } from "./hero-bg-two-mobile.svg";
 export { default as groupPics } from "./group-pics.svg";
 export { default as heroImageDesktop } from "./hero-image-desktop.svg";
-export { default as heroImageMobile } from "./hero-image-mobile.svg";
