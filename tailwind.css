@@ -8,6 +8,7 @@
 @theme {
 	--color-tech4teens-primary: hsl(290, 60%, 34%);
 
+	--color-tech4teens-bg-color: hsl(0, 0%, 98%);
 	--color-tech4teens-text-color: hsl(0, 0%, 20%);
 	--color-tech4teens-sub-text-color: hsl(0, 0%, 38%);
 }
@@ -190,6 +191,7 @@
 		line-height: 1.5;
 		font-family: var(--font-geist);
 		color: var(--color-tech4teens-text-color);
+		background-color: var(--color-tech4teens-bg-color);
 	}
 }
 
