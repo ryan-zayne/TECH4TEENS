@@ -6,8 +6,10 @@
 /* App Colors        */
 /*-------------------*/
 @theme {
-	--color-tech4teens-body-color: hsl(0, 0%, 20%);
 	--color-tech4teens-primary: hsl(290, 60%, 34%);
+
+	--color-tech4teens-text-color: hsl(0, 0%, 20%);
+	--color-tech4teens-sub-text-color: hsl(0, 0%, 38%);
 }
 
 /* ------------------*/
@@ -22,6 +24,7 @@
 	--breakpoint-xl: 1280px;
 
 	/* Fonts */
+	--font-geist: "Geist", sans-serif;
 
 	/* Animations */
 
@@ -185,8 +188,8 @@
 
 	body {
 		line-height: 1.5;
-		font-family: var(--font-outfit);
-		color: var(--color-tech4teens-body-color);
+		font-family: var(--font-geist);
+		color: var(--color-tech4teens-text-color);
 	}
 }
 
