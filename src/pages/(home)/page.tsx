@@ -58,7 +58,12 @@ function HomePage() {
 					</div>
 				</article>
 
-				<Image className="mx-2 mt-9" src={heroImageMobile} alt="" layout="fullWidth" />
+				<Image
+					className="mx-2 mt-9 h-[122px] w-full"
+					src={heroImageMobile}
+					height={122}
+					layout="fullWidth"
+				/>
 			</section>
 
 			<section className="flex flex-col gap-7.5 px-6">
