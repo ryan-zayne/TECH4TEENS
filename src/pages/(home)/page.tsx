@@ -1,4 +1,4 @@
-import { groupPics, heroBgOneMobile, heroBgTwoMobile, heroImageDesktop } from "@/assets/images/landing";
+import { groupPics, heroBgOneMobile, heroBgTwoMobile, heroImageMobile } from "@/assets/images/landing";
 import { IconBox, Image } from "@/components/common";
 import { UserIcon } from "@/components/icons/UserIcon";
 import { DropdownMenu } from "@/components/ui";
@@ -8,7 +8,7 @@ import { Main } from "./-components/Main";
 function HomePage() {
 	return (
 		<Main className="gap-12 pb-[102px]">
-			<section className="relative flex flex-col items-center px-7 pt-[88px]">
+			<section className="relative flex flex-col items-center px-7 pt-[88px] pb-3.5">
 				<div className="absolute inset-0 isolate -z-1">
 					<Image
 						src={heroBgOneMobile}
@@ -58,7 +58,7 @@ function HomePage() {
 					</div>
 				</article>
 
-				<Image className="mx-2 mt-9" src={heroImageDesktop} alt="" layout="fullWidth" />
+				<Image className="mx-2 mt-9" src={heroImageMobile} alt="" layout="fullWidth" />
 			</section>
 
 			<section className="flex flex-col gap-7.5 px-6">
