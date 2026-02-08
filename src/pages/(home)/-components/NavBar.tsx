@@ -1,6 +1,7 @@
 import { useToggle } from "@zayne-labs/toolkit-react";
 import { IconBox } from "@/components/common";
 import { Logo } from "@/components/common/Logo";
+import { Button } from "@/components/ui/button";
 import { cnMerge } from "@/lib/utils/cn";
 
 function NavBar() {
@@ -23,11 +24,12 @@ function MobileNavigation(props: { className?: string }) {
 	return (
 		<>
 			<section className={cnMerge("", className)}></section>
-			<button className="z-10" onClick={toggleNavShow}>
+
+			<Button unstyled={true} className="z-10 md:hidden" onClick={toggleNavShow}>
 				{isNavShow ?
 					<IconBox icon="basil:cancel-outline" className="size-6" />
 				:	<IconBox icon="mi:menu" className="size-6" />}
-			</button>
+			</Button>
 		</>
 	);
 }

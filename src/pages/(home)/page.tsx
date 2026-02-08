@@ -1,18 +1,14 @@
-import {
-	groupPics,
-	heroBgOneMobile,
-	heroBgTwoMobile,
-	heroImageDesktop,
-	heroImageMobile,
-} from "@/assets/images/landing";
-import { Image } from "@/components/common";
+import { groupPics, heroBgOneMobile, heroBgTwoMobile, heroImageDesktop } from "@/assets/images/landing";
+import { IconBox, Image } from "@/components/common";
+import { UserIcon } from "@/components/icons/UserIcon";
+import { DropdownMenu } from "@/components/ui";
 import { Button } from "@/components/ui/button";
 import { Main } from "./-components/Main";
 
 function HomePage() {
 	return (
-		<Main>
-			<section className="relative flex flex-col items-center px-7 pt-[88px]">
+		<Main className="gap-12 px-6 pb-[102px]">
+			<section className="relative flex flex-col items-center pt-[88px]">
 				<div className="absolute inset-0 isolate -z-1">
 					<Image
 						src={heroBgOneMobile}
@@ -62,7 +58,39 @@ function HomePage() {
 					</div>
 				</article>
 
-				<Image className="mt-9" src={heroImageDesktop} alt="" layout="fullWidth" />
+				<Image className="mx-2 mt-9" src={heroImageDesktop} alt="" layout="fullWidth" />
+			</section>
+
+			<section className="flex flex-col gap-7.5">
+				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
+					<h2 className="text-[14px] font-semibold">Explore All Courses</h2>
+					<p className="text-[12px] text-tech4teens-sub-text-color">
+						Choose the right course to help your teen develop and advance their skills.
+					</p>
+				</article>
+
+				<article>
+					<DropdownMenu.Root>
+						<DropdownMenu.Trigger asChild={true}>
+							<Button
+								theme="primary-inverse"
+								size="large"
+								className="max-w-[152px] justify-between border-tech4teens-sub-text-color
+									text-tech4teens-text-color"
+							>
+								<span className="inline-flex items-center gap-1">
+									<UserIcon />
+									Instructors
+								</span>
+
+								<IconBox
+									icon="iconamoon:arrow-down-2"
+									className="size-6 transition-[rotate] in-data-[state=open]:rotate-180"
+								/>
+							</Button>
+						</DropdownMenu.Trigger>
+					</DropdownMenu.Root>
+				</article>
 			</section>
 		</Main>
 	);

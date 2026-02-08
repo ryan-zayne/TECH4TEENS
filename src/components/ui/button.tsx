@@ -39,11 +39,12 @@ export const buttonVariants = tv({
 		},
 
 		size: {
-			"full-width": "h-10 w-full text-[12px] md:h-[56px] md:text-[20px]",
+			"full-width": "h-10 w-full px-4 text-[12px] md:h-[56px] md:px-6 md:text-[20px]",
 
-			large: "h-9 w-full max-w-[140px] text-[12px] md:h-[56px] md:max-w-[250px] md:text-[20px]",
+			large: `h-9 w-full max-w-[140px] px-4 text-[12px] md:h-[56px] md:max-w-[250px] md:px-6
+			md:text-[20px]`,
 
-			medium: "h-8 px-4 py-2 text-[12px] md:h-10 md:px-6 md:text-base",
+			medium: "h-8 px-4 text-[12px] md:h-10 md:px-6 md:text-base",
 		},
 
 		theme: {
