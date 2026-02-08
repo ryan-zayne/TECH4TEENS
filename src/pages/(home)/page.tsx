@@ -7,8 +7,8 @@ import { Main } from "./-components/Main";
 
 function HomePage() {
 	return (
-		<Main className="gap-12 px-6 pb-[102px]">
-			<section className="relative flex flex-col items-center pt-[88px]">
+		<Main className="gap-12 pb-[102px]">
+			<section className="relative flex flex-col items-center px-7 pt-[88px]">
 				<div className="absolute inset-0 isolate -z-1">
 					<Image
 						src={heroBgOneMobile}
@@ -61,7 +61,7 @@ function HomePage() {
 				<Image className="mx-2 mt-9" src={heroImageDesktop} alt="" layout="fullWidth" />
 			</section>
 
-			<section className="flex flex-col gap-7.5">
+			<section className="flex flex-col gap-7.5 px-6">
 				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
 					<h2 className="text-[14px] font-semibold">Explore All Courses</h2>
 					<p className="text-[12px] text-tech4teens-sub-text-color">
