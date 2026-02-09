@@ -1,10 +1,6 @@
 "use client";
 
-import type {
-	InferProps,
-	PolymorphicProps,
-	PolymorphicPropsStrict,
-} from "@zayne-labs/toolkit-react/utils";
+import type { InferProps, PolymorphicPropsStrict } from "@zayne-labs/toolkit-react/utils";
 import type { Prettify } from "@zayne-labs/toolkit-type-helpers";
 import { tv, type VariantProps } from "tailwind-variants";
 import { Slot } from "@/components/common/slot";

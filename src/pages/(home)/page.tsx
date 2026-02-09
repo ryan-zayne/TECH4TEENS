@@ -32,7 +32,7 @@ const courses = [
 		title: "Graphic Designing & Branding",
 	},
 	{
-		desctiption:
+		description:
 			"Learn how to write clear and persuasive content that communicates ideas effectively for storytelling and branding",
 		image: courseThree,
 		price: "40,000",

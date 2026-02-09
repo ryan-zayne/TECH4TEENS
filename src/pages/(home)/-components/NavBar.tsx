@@ -23,7 +23,7 @@ function MobileNavigation(props: { className?: string }) {
 
 	return (
 		<>
-			<section className={cnMerge("", className)}></section>
+			<section className={cnMerge("", className)} />
 
 			<Button unstyled={true} className="z-10 lg:hidden" onClick={toggleNavShow}>
 				{isNavShow ?
