@@ -7,6 +7,8 @@
 /*-------------------*/
 @theme {
 	--color-tech4teens-primary: hsl(290, 60%, 34%);
+	--color-tech4teens-secondary: hsl(50, 98%, 50%);
+	--color-tech4teens-footer-color: hsl(290, 94%, 6%);
 
 	--color-tech4teens-bg-color: hsl(0, 0%, 98%);
 	--color-tech4teens-text-color: hsl(0, 0%, 20%);
