@@ -9,6 +9,7 @@ import {
 	heroBgOneMobile,
 	heroBgTwoMobile,
 	heroImageMobile,
+	logoBig,
 	tabImageOne,
 } from "@/assets/images/landing";
 import { TabsAnimated } from "@/components/animated/ui";
@@ -166,7 +167,7 @@ function HomePage() {
 			<section className="flex flex-col gap-7.5 px-6">
 				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
 					<h2 className="text-[14px] font-semibold">Why Tech4Teens</h2>
-					<p className="text-[12px] text-tech4teens-sub-text-color">
+					<p className="text-[12px]">
 						Choose the right course to help your teen develop and advance their skills.
 					</p>
 				</article>
@@ -177,6 +178,7 @@ function HomePage() {
 							<Image
 								src={tabImageOne}
 								alt="Tab Image One"
+								height={266}
 								className="h-auto w-full"
 								layout="fullWidth"
 							/>
@@ -185,6 +187,7 @@ function HomePage() {
 							<Image
 								src={tabImageOne}
 								alt="Tab Image One"
+								height={266}
 								className="h-auto w-full"
 								layout="fullWidth"
 							/>
@@ -193,6 +196,7 @@ function HomePage() {
 							<Image
 								src={tabImageOne}
 								alt="Tab Image One"
+								height={266}
 								className="h-auto w-full"
 								layout="fullWidth"
 							/>
@@ -240,6 +244,36 @@ function HomePage() {
 						</TabsAnimated.Trigger>
 					</TabsAnimated.List>
 				</TabsAnimated.Root>
+			</section>
+
+			<section className="flex flex-col gap-7.5 px-6">
+				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
+					<h2 className="text-[14px] font-semibold">Frequently Asked Questions</h2>
+					<p className="text-[12px]">Everything you need to know about Tech4Teens</p>
+				</article>
+
+				<article className="flex flex-col gap-3 rounded-[24px] border border-[hsl(0,0%,76%)] p-3.5">
+					<figure
+						className="flex flex-col items-center gap-9 rounded-[16px] bg-[hsl(275,53%,45%)] px-3.5
+							py-7.5"
+					>
+						<figcaption className="max-w-[260px] text-[12px]/4 text-tech4teens-bg-color">
+							Tech4Teens is designed for teenagers between the ages of 13 and 19 who are interested
+							in learning practical tech skills. No prior experience is required, as all courses are
+							structured to start from the basics and gradually build confidence and competence.
+						</figcaption>
+
+						<Image src={logoBig} height={96} layout="fullWidth" />
+					</figure>
+
+					<div
+						className="flex h-[72px] items-center gap-2 rounded-[8px] border
+							border-tech4teens-primary bg-[hsl(0,0%,96%)] px-4"
+					>
+						<span className="size-3 rounded-full bg-tech4teens-primary" />
+						<p>Who can enroll in Tech4Teens?</p>
+					</div>
+				</article>
 			</section>
 		</Main>
 	);
