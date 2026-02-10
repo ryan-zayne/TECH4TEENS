@@ -200,37 +200,40 @@ function HomePage() {
 					</TabsAnimated.ContentList>
 
 					<TabsAnimated.List
-						classNames={{ highlight: "hidden", list: "flex-col gap-3 bg-transparent" }}
+						classNames={{
+							highlight: "-left-1 w-[20px] rounded-l-[12px] bg-tech4teens-primary",
+							list: "flex-col gap-3 bg-transparent",
+						}}
 					>
 						<TabsAnimated.Trigger
 							value="tab-1"
-							className="flex-col items-start bg-[hsl(0,0%,95%)] px-6 py-3.5 text-left
-								whitespace-normal"
+							className="flex-col items-start rounded-[12px] bg-[hsl(0,0%,95%)] px-6 py-3.5
+								text-left whitespace-normal"
 						>
-							<h3>Learn from Experts</h3>
-							<p>
+							<h3 className="text-[14px] font-semibold">Learn from Experts</h3>
+							<p className="text-[12px]">
 								Students will learn from experienced professionals who know how to teach teens in a
 								way they can easily understand.
 							</p>
 						</TabsAnimated.Trigger>
 						<TabsAnimated.Trigger
 							value="tab-2"
-							className="flex-col items-start bg-[hsl(0,0%,95%)] px-6 py-3.5 text-left
-								whitespace-normal"
+							className="flex-col items-start rounded-[12px] bg-[hsl(0,0%,95%)] px-6 py-3.5
+								text-left whitespace-normal"
 						>
-							<h3>Live Video Classes</h3>
-							<p>
+							<h3 className="text-[14px] font-semibold">Live Video Classes</h3>
+							<p className="text-[12px]">
 								Students learn in real-time and can interact directly with tutors, ask questions,
 								and get immediate feedback.
 							</p>
 						</TabsAnimated.Trigger>
 						<TabsAnimated.Trigger
 							value="tab-3"
-							className="flex-col items-start bg-[hsl(0,0%,95%)] px-6 py-3.5 text-left
-								whitespace-normal"
+							className="flex-col items-start rounded-[12px] bg-[hsl(0,0%,95%)] px-6 py-3.5
+								text-left whitespace-normal"
 						>
-							<h3>Practical Learning and Assessments</h3>
-							<p>
+							<h3 className="text-[14px] font-semibold">Practical Learning and Assessments</h3>
+							<p className="text-[12px]">
 								Courses are hands-on with real projects and assessments, so teens build skills they
 								can use even at a young age.
 							</p>

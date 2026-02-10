@@ -518,8 +518,6 @@ function MotionHighlightItem<T extends React.ElementType = "div">(props: Highlig
 								layoutId={`transition-background-${contextId}`}
 								data-slot="motion-highlight"
 								style={{
-									position: "absolute",
-									zIndex: 0,
 									...contextStyle,
 									...style,
 								}}
@@ -581,8 +579,6 @@ function MotionHighlightItem<T extends React.ElementType = "div">(props: Highlig
 								layoutId={`transition-background-${contextId}`}
 								data-slot="motion-highlight"
 								style={{
-									position: "absolute",
-									zIndex: 0,
 									...contextStyle,
 									...style,
 								}}
