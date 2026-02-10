@@ -55,7 +55,9 @@ export const buttonVariants = tv({
 	},
 });
 
-function Button<TElement extends React.ElementType>(props: PolymorphicPropsStrict<TElement, ButtonProps>) {
+function Button<TElement extends React.ElementType = "button">(
+	props: PolymorphicPropsStrict<TElement, ButtonProps>
+) {
 	const {
 		as: Element = "button",
 		asChild,

@@ -2,6 +2,7 @@ import {
 	courseFive,
 	courseFour,
 	courseOne,
+	courseSix,
 	courseThree,
 	courseTwo,
 	groupPics,
@@ -55,7 +56,7 @@ const courses = [
 	{
 		description:
 			"Learn how to build AI workflows to automate tasks like data processing, report generation, and system monitoring.",
-		image: courseTwo,
+		image: courseSix,
 		price: "60,000",
 		title: "AI Automation",
 	},
