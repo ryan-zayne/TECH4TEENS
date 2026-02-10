@@ -201,7 +201,7 @@ function HomePage() {
 
 					<TabsAnimated.List
 						classNames={{
-							highlight: "-left-1 w-[20px] rounded-l-[12px] bg-tech4teens-primary",
+							highlight: "-left-1 w-[20px] rounded-l-[12px] bg-tech4teens-primary shadow-none",
 							list: "flex-col gap-3 bg-transparent",
 						}}
 					>
