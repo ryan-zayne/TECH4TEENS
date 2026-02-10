@@ -9,7 +9,7 @@ function NavBar() {
 		<header className="absolute z-500 flex w-full items-center justify-between px-6 pt-5">
 			<Logo className="h-7.5 w-[74px]" />
 
-			<MobileNavigation className="lg:hidden" />
+			<MobileNavigation className="" />
 		</header>
 	);
 }
@@ -25,7 +25,7 @@ function MobileNavigation(props: { className?: string }) {
 		<>
 			<section className={cnMerge("", className)} />
 
-			<Button unstyled={true} className="z-10 lg:hidden" onClick={toggleNavShow}>
+			<Button unstyled={true} className={cnMerge("z-10", className)} onClick={toggleNavShow}>
 				{isNavShow ?
 					<IconBox icon="basil:cancel-outline" className="size-6" />
 				:	<IconBox icon="mi:menu" className="size-6" />}

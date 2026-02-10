@@ -9,7 +9,9 @@ import {
 	heroBgOneMobile,
 	heroBgTwoMobile,
 	heroImageMobile,
+	tabImageOne,
 } from "@/assets/images/landing";
+import { TabsAnimated } from "@/components/animated/ui";
 import { ForWithWrapper, IconBox, Image } from "@/components/common";
 import { UserIcon } from "@/components/icons/UserIcon";
 import { DropdownMenu } from "@/components/ui";
@@ -64,7 +66,7 @@ const courses = [
 
 function HomePage() {
 	return (
-		<Main className="gap-12 pb-[102px] max-lg:max-w-[402px]">
+		<Main className="max-w-[402px] gap-[54px] pb-[102px]">
 			<section className="relative flex flex-col items-center px-7 pt-[88px] pb-3.5">
 				<div className="absolute inset-0 isolate -z-1">
 					<Image
@@ -104,23 +106,23 @@ function HomePage() {
 						In a world where technology shapes every industry, give your child the advantage they
 						need to thrive.
 					</p>
-
-					<div className="mt-6.5 flex flex-col gap-3">
-						<Button theme="primary" size="full-width">
-							Register Your Child
-						</Button>
-						<Button theme="primary-inverse" size="full-width">
-							Make Enquiries
-						</Button>
-					</div>
 				</article>
 
 				<Image
-					className="mx-2 mt-9 h-[122px] w-full"
+					className="mx-2 mt-7 h-[122px] w-full"
 					src={heroImageMobile}
 					height={122}
 					layout="fullWidth"
 				/>
+
+				<div className="mt-8 flex w-full max-w-[300px] flex-col gap-3">
+					<Button theme="primary" size="full-width">
+						Register Your Child
+					</Button>
+					<Button theme="primary-inverse" size="full-width">
+						Make Enquiries
+					</Button>
+				</div>
 			</section>
 
 			<section className="flex flex-col gap-7.5 px-6">
@@ -159,6 +161,82 @@ function HomePage() {
 						renderItem={(item) => <CourseCard {...item} />}
 					/>
 				</article>
+			</section>
+
+			<section className="flex flex-col gap-7.5 px-6">
+				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
+					<h2 className="text-[14px] font-semibold">Why Tech4Teens</h2>
+					<p className="text-[12px] text-tech4teens-sub-text-color">
+						Choose the right course to help your teen develop and advance their skills.
+					</p>
+				</article>
+
+				<TabsAnimated.Root defaultValue="tab-1" className="gap-4">
+					<TabsAnimated.ContentList>
+						<TabsAnimated.Content value="tab-1">
+							<Image
+								src={tabImageOne}
+								alt="Tab Image One"
+								className="h-auto w-full"
+								layout="fullWidth"
+							/>
+						</TabsAnimated.Content>
+						<TabsAnimated.Content value="tab-2">
+							<Image
+								src={tabImageOne}
+								alt="Tab Image One"
+								className="h-auto w-full"
+								layout="fullWidth"
+							/>
+						</TabsAnimated.Content>
+						<TabsAnimated.Content value="tab-3">
+							<Image
+								src={tabImageOne}
+								alt="Tab Image One"
+								className="h-auto w-full"
+								layout="fullWidth"
+							/>
+						</TabsAnimated.Content>
+					</TabsAnimated.ContentList>
+
+					<TabsAnimated.List
+						classNames={{ highlight: "hidden", list: "flex-col gap-3 bg-transparent" }}
+					>
+						<TabsAnimated.Trigger
+							value="tab-1"
+							className="flex-col items-start bg-[hsl(0,0%,95%)] px-6 py-3.5 text-left
+								whitespace-normal"
+						>
+							<h3>Learn from Experts</h3>
+							<p>
+								Students will learn from experienced professionals who know how to teach teens in a
+								way they can easily understand.
+							</p>
+						</TabsAnimated.Trigger>
+						<TabsAnimated.Trigger
+							value="tab-2"
+							className="flex-col items-start bg-[hsl(0,0%,95%)] px-6 py-3.5 text-left
+								whitespace-normal"
+						>
+							<h3>Live Video Classes</h3>
+							<p>
+								Students learn in real-time and can interact directly with tutors, ask questions,
+								and get immediate feedback.
+							</p>
+						</TabsAnimated.Trigger>
+						<TabsAnimated.Trigger
+							value="tab-3"
+							className="flex-col items-start bg-[hsl(0,0%,95%)] px-6 py-3.5 text-left
+								whitespace-normal"
+						>
+							<h3>Practical Learning and Assessments</h3>
+							<p>
+								Courses are hands-on with real projects and assessments, so teens build skills they
+								can use even at a young age.
+							</p>
+						</TabsAnimated.Trigger>
+					</TabsAnimated.List>
+				</TabsAnimated.Root>
 			</section>
 		</Main>
 	);
