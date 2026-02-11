@@ -1,22 +1,23 @@
+import { NavLink } from "react-router";
 import { IconBox, Image } from "@/components/common";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { courseDetails } from "./constants/course-details";
 
-function CourseCard(props: { description: string; image: string; price: string; title: string }) {
-	const { description, image, price, title } = props;
+function CourseCard(props: (typeof courseDetails)[number]) {
+	const { description, href, image, price, title } = props;
 
 	return (
 		<Card.Root
 			key={title}
 			as="li"
-			className="flex flex-col gap-[18px] rounded-[24px] border border-tech4teens-footer-color px-3.5
-				py-5"
+			className="flex flex-col gap-[18px] rounded-[24px] border border-tech4teens-footer-color p-5"
 		>
 			<Card.Header className="relative">
 				<span className="absolute top-[52px] left-0 bg-tech4teens-secondary px-2.5 py-1 text-[11px]">
 					5 Slots Available
 				</span>
-				<Image src={image} layout="fullWidth" className="rounded-[16px]" />
+				<Image src={image} height={242} layout="fullWidth" className="h-[242px] rounded-[16px]" />
 			</Card.Header>
 
 			<Card.Content className="flex flex-col gap-2">
@@ -27,8 +28,8 @@ function CourseCard(props: { description: string; image: string; price: string; 
 			</Card.Content>
 
 			<Card.Footer className="flex items-center justify-between">
-				<Card.Action as={Button} theme="primary-ghost">
-					Register
+				<Card.Action as={Button} asChild={true} theme="primary-ghost">
+					<NavLink to={href}>Register</NavLink>
 				</Card.Action>
 
 				<span className="inline-flex items-center font-bold">

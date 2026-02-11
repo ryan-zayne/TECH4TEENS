@@ -1,10 +1,4 @@
 import {
-	courseFive,
-	courseFour,
-	courseOne,
-	courseSix,
-	courseThree,
-	courseTwo,
 	groupPics,
 	heroBgOneMobile,
 	heroBgTwoMobile,
@@ -18,53 +12,9 @@ import { ForWithWrapper, IconBox, Image } from "@/components/common";
 import { UserIcon } from "@/components/icons/UserIcon";
 import { DropdownMenu } from "@/components/ui";
 import { Button } from "@/components/ui/button";
+import { courseDetails } from "./-components/constants/course-details";
 import { CourseCard } from "./-components/CourseCard";
 import { Main } from "./-components/Main";
-
-const courses = [
-	{
-		description:
-			"Learn the fundamentals of basic computer tools including document creation, spreadsheets, and presentations using Microsoft applications.",
-		image: courseOne,
-		price: "30,000",
-		title: "Basic Computer Tools",
-	},
-	{
-		description:
-			"Master design basics and create stunning visuals using Photoshop, Illustrator, CorelDRAW, and more.",
-		image: courseTwo,
-		price: "30,000",
-		title: "Graphic Designing & Branding",
-	},
-	{
-		description:
-			"Learn how to write clear and persuasive content that communicates ideas effectively for storytelling and branding",
-		image: courseThree,
-		price: "40,000",
-		title: "Copy Writing",
-	},
-	{
-		description:
-			"Learn how to design mobile apps and websites that solve real-world problems in today’s tech industry.",
-		image: courseFour,
-		price: "60,000",
-		title: "Digital Product Designing",
-	},
-	{
-		description:
-			"Learn how to build software applications while developing strong problem-solving and logical thinking skills..",
-		image: courseFive,
-		price: "120,000",
-		title: "Software Development",
-	},
-	{
-		description:
-			"Learn how to build AI workflows to automate tasks like data processing, report generation, and system monitoring.",
-		image: courseSix,
-		price: "60,000",
-		title: "AI Automation",
-	},
-];
 
 function HomePage() {
 	return (
@@ -158,7 +108,7 @@ function HomePage() {
 					</DropdownMenu.Root>
 
 					<ForWithWrapper
-						each={courses}
+						each={courseDetails}
 						className="flex flex-col gap-4"
 						renderItem={(item) => <CourseCard key={item.title} {...item} />}
 					/>

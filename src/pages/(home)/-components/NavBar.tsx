@@ -1,20 +1,27 @@
 import { useScrollObserver, useToggle } from "@zayne-labs/toolkit-react";
+import { useLocation } from "react-router";
 import { ForWithWrapper, IconBox, NavLink } from "@/components/common";
 import { Logo } from "@/components/common/Logo";
 import { Button } from "@/components/ui/button";
 import { cnJoin, cnMerge } from "@/lib/utils/cn";
+import { navLinkItems } from "./constants/navLinkItems";
 
 function NavBar() {
 	const { isScrolled, observedElementRef } = useScrollObserver({
 		rootMargin: "10px 0px 0px",
 	});
 
+	const pathName = useLocation().pathname;
+
+	const isHomePage = pathName === "/";
+
 	return (
 		<header
 			ref={observedElementRef}
 			className={cnJoin(
-				`fixed inset-[0_0_auto_0] isolate z-500 flex w-full items-center justify-between p-4 px-6
+				`inset-[0_0_auto_0] isolate z-500 flex h-[72px] w-full items-center justify-between px-6
 				transition-[background-color,box-shadow] duration-300 ease-[ease]`,
+				isHomePage ? "fixed" : "sticky",
 				isScrolled && "bg-tech4teens-bg-color shadow-[0_4px_6px_theme(--color-black/0.2)]"
 			)}
 		>
@@ -26,25 +33,6 @@ function NavBar() {
 }
 
 export { NavBar };
-
-const linkItems = [
-	{
-		href: "/",
-		title: "Home",
-	},
-	{
-		href: "#",
-		title: "Explore Courses",
-	},
-	{
-		href: "#",
-		title: "Why Tech4Teens",
-	},
-	{
-		href: "#",
-		title: "FAQs",
-	},
-];
 
 function MobileNavigation(props: { className?: string }) {
 	const { className } = props;
@@ -64,10 +52,10 @@ function MobileNavigation(props: { className?: string }) {
 				<ForWithWrapper
 					as="nav"
 					className="flex flex-col gap-4 pl-6 text-[12px] text-nowrap"
-					each={linkItems}
-					renderItem={(linkItem) => (
-						<NavLink key={linkItem.title} to={linkItem.href}>
-							{linkItem.title}
+					each={navLinkItems}
+					renderItem={(item) => (
+						<NavLink key={item.href} to={item.href}>
+							{item.title}
 						</NavLink>
 					)}
 				/>

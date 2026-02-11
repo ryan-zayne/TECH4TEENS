@@ -1,5 +1,8 @@
 import { NavLink } from "react-router";
+import { ForWithWrapper } from "@/components/common";
 import { Logo } from "@/components/common/Logo";
+import { courseDetails } from "./constants/course-details";
+import { navLinkItems } from "./constants/navLinkItems";
 
 function Footer() {
 	return (
@@ -17,25 +20,31 @@ function Footer() {
 			<section className="flex flex-col gap-2">
 				<h3 className="text-[14px] font-semibold">Products</h3>
 
-				<nav className="flex flex-col gap-1 text-[12px]">
-					<NavLink to="/">Home</NavLink>
-					<NavLink to="#">Explore Courses</NavLink>
-					<NavLink to="#">Why Tech4Teens</NavLink>
-					<NavLink to="#">FAQs</NavLink>
-				</nav>
+				<ForWithWrapper
+					as="nav"
+					each={navLinkItems}
+					className="flex flex-col gap-1 text-[12px]"
+					renderItem={(item) => (
+						<NavLink key={item.href} to={item.href}>
+							{item.title}
+						</NavLink>
+					)}
+				/>
 			</section>
 
 			<section className="flex flex-col gap-2">
 				<h3 className="text-[14px] font-semibold">Courses</h3>
 
-				<nav className="flex flex-col gap-1 text-[12px]">
-					<NavLink to="#">Basic Computer Tools</NavLink>
-					<NavLink to="#">Graphic Designing & Branding</NavLink>
-					<NavLink to="#">Copy Writing</NavLink>
-					<NavLink to="#">Digital Product Designing</NavLink>
-					<NavLink to="#">Software Development</NavLink>
-					<NavLink to="#">AI Automation</NavLink>
-				</nav>
+				<ForWithWrapper
+					as="nav"
+					className="flex flex-col gap-1 text-[12px]"
+					each={courseDetails}
+					renderItem={(item) => (
+						<NavLink key={item.href} to={item.href}>
+							{item.title}
+						</NavLink>
+					)}
+				/>
 			</section>
 
 			<hr className="mt-4 mb-5 border border-[hsl(0,0%,85%)]" />
