@@ -277,7 +277,7 @@ function HomePage() {
 				</article>
 			</section>
 
-			<section className="relative mx-6 flex flex-col items-center gap-6 px-6 py-8.5">
+			<section className="relative isolate mx-6 flex flex-col items-center gap-6 px-6 py-8.5">
 				<Image
 					src={sectionBg}
 					layout="fullWidth"
