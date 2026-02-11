@@ -69,7 +69,7 @@ const courses = [
 function HomePage() {
 	return (
 		<Main className="max-w-[402px] gap-[54px] pb-[102px]">
-			<section className="relative flex flex-col items-center px-7 pt-[88px] pb-3.5">
+			<section className="relative isolate flex flex-col items-center px-7 pt-[88px] pb-3.5">
 				<div className="absolute inset-0 isolate -z-1">
 					<Image
 						src={heroBgOneMobile}
@@ -160,7 +160,7 @@ function HomePage() {
 					<ForWithWrapper
 						each={courses}
 						className="flex flex-col gap-4"
-						renderItem={(item) => <CourseCard {...item} />}
+						renderItem={(item) => <CourseCard key={item.title} {...item} />}
 					/>
 				</article>
 			</section>
