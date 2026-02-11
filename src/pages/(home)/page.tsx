@@ -10,6 +10,7 @@ import {
 	heroBgTwoMobile,
 	heroImageMobile,
 	logoBig,
+	sectionBg,
 	tabImageOne,
 } from "@/assets/images/landing";
 import { TabsAnimated } from "@/components/animated/ui";
@@ -120,13 +121,13 @@ function HomePage() {
 					<Button theme="primary" size="full-width">
 						Register Your Child
 					</Button>
-					<Button theme="primary-inverse" size="full-width">
+					<Button theme="primary-ghost" size="full-width">
 						Make Enquiries
 					</Button>
 				</div>
 			</section>
 
-			<section className="flex flex-col gap-7.5 px-6">
+			<section className="mx-6 flex flex-col gap-7.5">
 				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
 					<h2 className="text-[14px] font-semibold">Explore All Courses</h2>
 					<p className="text-[12px] text-tech4teens-sub-text-color">
@@ -138,7 +139,7 @@ function HomePage() {
 					<DropdownMenu.Root>
 						<DropdownMenu.Trigger asChild={true}>
 							<Button
-								theme="primary-inverse"
+								theme="primary-ghost"
 								size="large"
 								className="max-w-[152px] justify-between border-tech4teens-sub-text-color
 									text-tech4teens-text-color"
@@ -164,7 +165,7 @@ function HomePage() {
 				</article>
 			</section>
 
-			<section className="flex flex-col gap-7.5 px-6">
+			<section className="mx-6 flex flex-col gap-7.5">
 				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
 					<h2 className="text-[14px] font-semibold">Why Tech4Teens</h2>
 					<p className="text-[12px]">
@@ -246,7 +247,7 @@ function HomePage() {
 				</TabsAnimated.Root>
 			</section>
 
-			<section className="flex flex-col gap-7.5 px-6">
+			<section className="mx-6 flex flex-col gap-7.5">
 				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
 					<h2 className="text-[14px] font-semibold">Frequently Asked Questions</h2>
 					<p className="text-[12px]">Everything you need to know about Tech4Teens</p>
@@ -274,6 +275,29 @@ function HomePage() {
 						<p>Who can enroll in Tech4Teens?</p>
 					</div>
 				</article>
+			</section>
+
+			<section className="relative mx-6 flex flex-col items-center gap-6 px-6 py-8.5">
+				<Image
+					src={sectionBg}
+					layout="fullWidth"
+					className="absolute inset-0 -z-1 size-full rounded-[16px] object-cover"
+				/>
+
+				<article className="flex max-w-[285px] flex-col gap-1 self-center text-center text-white">
+					<h2 className="text-[14px] font-semibold">
+						We’re on a mission to help teens start their tech journey early
+					</h2>
+					<p className="text-[11px]">
+						We understand the importance of learning valuable skills at a young age and nurturing
+						them over time. Your child could be the next big tech star. Give them the opportunity to
+						explore and grow their potential in tech.
+					</p>
+				</article>
+
+				<Button theme="primary-white" size="large">
+					Register Your Child
+				</Button>
 			</section>
 		</Main>
 	);

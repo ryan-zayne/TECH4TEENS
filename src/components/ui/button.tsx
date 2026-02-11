@@ -41,7 +41,7 @@ export const buttonVariants = tv({
 		size: {
 			"full-width": "h-10 w-full px-4 text-[12px] lg:h-[56px] lg:px-6 lg:text-[20px]",
 
-			large: `h-9 w-full max-w-[140px] px-4 text-[12px] lg:h-[56px] lg:max-w-[250px] lg:px-6
+			large: `h-9 w-full max-w-[140px] px-4 text-[12px] font-medium lg:h-[56px] lg:max-w-[250px] lg:px-6
 			lg:text-[20px]`,
 
 			medium: "h-8 px-4 text-[12px] lg:h-10 lg:px-6 lg:text-base",
@@ -50,7 +50,9 @@ export const buttonVariants = tv({
 		theme: {
 			primary: "bg-tech4teens-primary text-tech4teens-bg-color",
 
-			"primary-inverse": "border border-tech4teens-primary bg-transparent text-tech4teens-primary",
+			"primary-ghost": "border border-tech4teens-primary bg-transparent text-tech4teens-primary",
+
+			"primary-white": "bg-white text-tech4teens-primary",
 		},
 	},
 });

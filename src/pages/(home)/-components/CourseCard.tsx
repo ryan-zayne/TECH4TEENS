@@ -27,7 +27,7 @@ function CourseCard(props: { description: string; image: string; price: string; 
 			</Card.Content>
 
 			<Card.Footer className="flex items-center justify-between">
-				<Card.Action as={Button} theme="primary-inverse">
+				<Card.Action as={Button} theme="primary-ghost">
 					Register
 				</Card.Action>
 

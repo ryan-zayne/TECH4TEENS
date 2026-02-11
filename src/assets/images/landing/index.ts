@@ -13,3 +13,4 @@ export { default as courseFive } from "./course-five.svg";
 export { default as courseSix } from "./course-six.svg";
 export { default as tabImageOne } from "./tab-image-one.svg";
 export { default as logoBig } from "./logo-big.svg";
+export { default as sectionBg } from "./section-bg.jpg";
