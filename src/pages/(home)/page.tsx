@@ -18,7 +18,7 @@ import { Main } from "./-components/Main";
 
 function HomePage() {
 	return (
-		<Main className="max-w-[402px] gap-[54px] pb-[102px]">
+		<Main className="gap-[54px] pb-[102px]">
 			<section className="relative isolate flex flex-col items-center px-7 pt-[88px] pb-3.5">
 				<div className="absolute inset-0 isolate -z-1">
 					<Image

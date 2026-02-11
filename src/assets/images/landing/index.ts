@@ -5,7 +5,6 @@ export { default as heroBgTwoMobile } from "./hero-bg-two-mobile.svg";
 export { default as groupPics } from "./group-pics.svg";
 export { default as heroImageDesktop } from "./hero-image-desktop.svg";
 export { default as heroImageMobile } from "./hero-image-mobile.svg";
-
 export { default as tabImageOne } from "./tab-image-one.svg";
 export { default as logoBig } from "./logo-big.svg";
 export { default as sectionBg } from "./section-bg.jpg";
