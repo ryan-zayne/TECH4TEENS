@@ -1,4 +1,5 @@
 import { Outlet } from "react-router";
+import { Footer } from "./-components/Footer";
 import { NavBar } from "./-components/NavBar";
 
 function HomeLayout() {
@@ -6,6 +7,7 @@ function HomeLayout() {
 		<div className="flex grow flex-col items-center">
 			<NavBar />
 			<Outlet />
+			<Footer />
 		</div>
 	);
 }

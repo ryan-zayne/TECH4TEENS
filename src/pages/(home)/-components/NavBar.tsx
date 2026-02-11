@@ -7,9 +7,9 @@ import { cnMerge } from "@/lib/utils/cn";
 function NavBar() {
 	return (
 		<header className="absolute z-500 flex w-full items-center justify-between px-6 pt-5">
-			<Logo className="h-7.5 w-[74px]" />
+			<Logo height={30} className="h-7.5 w-[74px]" />
 
-			<MobileNavigation className="" />
+			<MobileNavigation className="lg:hidden" />
 		</header>
 	);
 }
