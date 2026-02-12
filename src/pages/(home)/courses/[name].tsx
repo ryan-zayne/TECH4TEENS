@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { sectionBg } from "@/assets/images/landing";
-import { ForWithWrapper, IconBox, Image } from "@/components/common";
+import { ForWithWrapper, IconBox, ImageResponsive } from "@/components/common";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { cnJoin } from "@/lib/utils/cn";
@@ -22,9 +22,9 @@ function CourseDetailPage() {
 			<section
 				className="relative isolate flex flex-col items-center gap-1 py-10.5 text-center text-white"
 			>
-				<Image
+				<ImageResponsive
 					src={sectionBg}
-					layout="fullWidth"
+					height={143}
 					className="absolute inset-0 -z-1 size-full object-cover"
 				/>
 
@@ -33,10 +33,9 @@ function CourseDetailPage() {
 			</section>
 
 			<section className="px-6">
-				<Image
+				<ImageResponsive
 					src={courseDetail.image}
 					height={266}
-					layout="fullWidth"
 					className={cnJoin(
 						"h-[266px] rounded-[16px]",
 						courseDetail.title === "Basic Computer Tools" && "border border-tech4teens-footer-color"
@@ -77,7 +76,7 @@ function CourseDetailPage() {
 
 				<article className="mt-8.5 flex flex-col gap-2 text-[12px]">
 					<figure className="flex items-center gap-2">
-						<Image
+						<ImageResponsive
 							src={courseDetail.extraDetails.tutor.image}
 							height={36}
 							width={36}

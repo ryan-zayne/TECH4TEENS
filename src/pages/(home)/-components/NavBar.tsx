@@ -43,8 +43,8 @@ function MobileNavigation(props: { className?: string }) {
 		<>
 			<section
 				className={cnMerge(
-					`absolute inset-[0_0_0_auto] flex h-svh flex-col gap-7 overflow-x-hidden
-					bg-tech4teens-bg-color pt-[68px] transition-[width] ease-[ease]`,
+					`fixed inset-[0_0_0_auto] flex flex-col gap-7 overflow-x-hidden bg-tech4teens-bg-color
+					pt-[68px] transition-[width] ease-[ease]`,
 					isNavShow ? "w-full duration-350" : "w-0 duration-500",
 					className
 				)}

@@ -1,14 +1,14 @@
 import {
 	groupPics,
-	heroBgOneMobile,
-	heroBgTwoMobile,
-	heroImageMobile,
+	heroBgOneDesktop,
+	heroBgTwoDesktop,
+	heroImageDesktop,
 	logoBig,
 	sectionBg,
 	tabImageOne,
 } from "@/assets/images/landing";
 import { TabsAnimated } from "@/components/animated/ui";
-import { ForWithWrapper, IconBox, Image } from "@/components/common";
+import { ForWithWrapper, IconBox, ImageResponsive } from "@/components/common";
 import { UserIcon } from "@/components/icons/UserIcon";
 import { DropdownMenu } from "@/components/ui";
 import { Button } from "@/components/ui/button";
@@ -22,18 +22,15 @@ function HomePage() {
 		<Main className="gap-[54px] pb-[102px]">
 			<section className="relative isolate flex flex-col items-center px-7 pt-[88px] pb-3.5">
 				<div className="absolute inset-0 isolate -z-1">
-					<Image
-						src={heroBgOneMobile}
+					<ImageResponsive
+						src={heroBgOneDesktop}
 						alt=""
-						layout="fullWidth"
-						fetchpriority="high"
 						className="absolute inset-0 h-full object-cover mix-blend-multiply"
 					/>
-					<Image
-						src={heroBgTwoMobile}
+					<ImageResponsive
+						src={heroBgTwoDesktop}
 						alt=""
-						layout="fullWidth"
-						fetchpriority="high"
+						fetchPriority="high"
 						className="absolute inset-0 h-full object-cover mix-blend-multiply"
 					/>
 				</div>
@@ -42,7 +39,7 @@ function HomePage() {
 					className="flex w-full max-w-[305px] items-center gap-1 rounded-[24px] bg-linear-to-r
 						from-[hsl(287,100%,95%)] to-[hsl(300,100%,97%)] py-1.5 pl-2"
 				>
-					<Image src={groupPics} layout="fullWidth" className="h-6 w-[66px]" />
+					<ImageResponsive src={groupPics} height={24} width={66} className="h-6 w-[66px]" />
 
 					<figcaption className="text-[8px] text-tech4teens-primary">
 						Join thousands of parents enroll your kids on Tech4Teen
@@ -61,12 +58,7 @@ function HomePage() {
 					</p>
 				</article>
 
-				<Image
-					className="mx-2 mt-7 h-[122px] w-full"
-					src={heroImageMobile}
-					height={122}
-					layout="fullWidth"
-				/>
+				<ImageResponsive className="mx-2 mt-7 h-[122px] w-full" src={heroImageDesktop} height={122} />
 
 				<div className="mt-8 flex w-full max-w-[300px] flex-col gap-3">
 					<Button theme="primary" size="full-width" asChild={true}>
@@ -127,30 +119,27 @@ function HomePage() {
 				<TabsAnimated.Root defaultValue="tab-1" className="gap-4">
 					<TabsAnimated.ContentList>
 						<TabsAnimated.Content value="tab-1">
-							<Image
+							<ImageResponsive
 								src={tabImageOne}
 								alt="Tab Image One"
 								height={266}
-								className="h-auto w-full"
-								layout="fullWidth"
+								className="h-auto w-full rounded-[24px]"
 							/>
 						</TabsAnimated.Content>
 						<TabsAnimated.Content value="tab-2">
-							<Image
+							<ImageResponsive
 								src={tabImageOne}
 								alt="Tab Image One"
 								height={266}
-								className="h-auto w-full"
-								layout="fullWidth"
+								className="h-auto w-full rounded-[24px]"
 							/>
 						</TabsAnimated.Content>
 						<TabsAnimated.Content value="tab-3">
-							<Image
+							<ImageResponsive
 								src={tabImageOne}
 								alt="Tab Image One"
 								height={266}
-								className="h-auto w-full"
-								layout="fullWidth"
+								className="h-auto w-full rounded-[24px]"
 							/>
 						</TabsAnimated.Content>
 					</TabsAnimated.ContentList>
@@ -215,7 +204,12 @@ function HomePage() {
 							structured to start from the basics and gradually build confidence and competence.
 						</figcaption>
 
-						<Image src={logoBig} height={96} layout="fullWidth" />
+						<ImageResponsive
+							src={logoBig}
+							width={300}
+							height={96}
+							className="h-[96px] w-full shrink-0"
+						/>
 					</figure>
 
 					<div
@@ -229,9 +223,9 @@ function HomePage() {
 			</section>
 
 			<section className="relative isolate mx-6 flex flex-col items-center gap-6 px-6 py-8.5">
-				<Image
+				<ImageResponsive
+					height={257}
 					src={sectionBg}
-					layout="fullWidth"
 					className="absolute inset-0 -z-1 size-full rounded-[16px] object-cover"
 				/>
 

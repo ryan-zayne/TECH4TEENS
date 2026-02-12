@@ -1,10 +1,7 @@
-export { default as heroBgOneDesktop } from "./hero-bg-one-desktop.svg";
-export { default as heroBgOneMobile } from "./hero-bg-one-mobile.svg";
-export { default as heroBgTwoDesktop } from "./hero-bg-two-desktop.svg";
-export { default as heroBgTwoMobile } from "./hero-bg-two-mobile.svg";
-export { default as groupPics } from "./group-pics.svg";
-export { default as heroImageDesktop } from "./hero-image-desktop.svg";
-export { default as heroImageMobile } from "./hero-image-mobile.svg";
-export { default as tabImageOne } from "./tab-image-one.svg";
-export { default as logoBig } from "./logo-big.svg";
-export { default as sectionBg } from "./section-bg.jpg";
+export { default as heroBgOneDesktop } from "./hero-bg-one-desktop.png?responsive";
+export { default as heroBgTwoDesktop } from "./hero-bg-two-desktop.png?responsive";
+export { default as groupPics } from "./group-pics.png?lossless&responsive";
+export { default as heroImageDesktop } from "./hero-image-desktop.png?responsive";
+export { default as tabImageOne } from "./tab-image-one.png?responsive";
+export { default as logoBig } from "./logo-big.png?responsive";
+export { default as sectionBg } from "./section-bg.png?responsive";

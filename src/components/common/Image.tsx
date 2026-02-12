@@ -1,8 +1,13 @@
-import { Image as ImagePrimitive } from "@unpic/react";
+import { ResponsiveImage } from "@responsive-image/react";
+import { Image as UnPicImage } from "@unpic/react";
 import type { InferProps } from "@zayne-labs/toolkit-react/utils";
 
-function Image(props: InferProps<typeof ImagePrimitive>) {
-	return <ImagePrimitive {...props} />;
+function ImageResponsive(props: InferProps<typeof ResponsiveImage>) {
+	return <ResponsiveImage {...props} />;
 }
 
-export { Image };
+function ImageOnline(props: InferProps<typeof UnPicImage>) {
+	return <UnPicImage {...props} />;
+}
+
+export { ImageResponsive, ImageOnline };

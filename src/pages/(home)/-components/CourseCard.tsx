@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-import { IconBox, Image } from "@/components/common";
+import { IconBox, ImageResponsive } from "@/components/common";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { courseDetails } from "./constants/course-details";
@@ -19,7 +19,12 @@ function CourseCard(props: (typeof courseDetails)[number]) {
 					<span className="absolute top-[52px] left-0 bg-tech4teens-secondary px-2.5 py-1 text-[11px]">
 						5 Slots Available
 					</span>
-					<Image src={image} height={242} layout="fullWidth" className="h-[242px] rounded-[16px]" />
+					<ImageResponsive
+						src={image}
+						width={326}
+						height={242}
+						className="h-[242px] w-full rounded-[16px] object-cover"
+					/>
 				</Card.Header>
 			</NavLink>
 
