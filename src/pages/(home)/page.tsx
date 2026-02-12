@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { courseDetails } from "./-components/constants/course-details";
 import { CourseCard } from "./-components/CourseCard";
 import { Main } from "./-components/Main";
+import { WhatsAppLink } from "./-components/WhatsAppLink";
 
 function HomePage() {
 	return (
@@ -68,8 +69,8 @@ function HomePage() {
 				/>
 
 				<div className="mt-8 flex w-full max-w-[300px] flex-col gap-3">
-					<Button theme="primary" size="full-width">
-						Register Your Child
+					<Button theme="primary" size="full-width" asChild={true}>
+						<WhatsAppLink>Register Your Child</WhatsAppLink>
 					</Button>
 					<Button theme="primary-ghost" size="full-width">
 						Make Enquiries
@@ -245,8 +246,8 @@ function HomePage() {
 					</p>
 				</article>
 
-				<Button theme="primary-white" size="large">
-					Register Your Child
+				<Button theme="primary-white" size="large" asChild={true}>
+					<WhatsAppLink>Register Your Child</WhatsAppLink>
 				</Button>
 			</section>
 		</Main>

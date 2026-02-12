@@ -40,7 +40,7 @@ function Footer() {
 					className="flex flex-col gap-1 text-[12px]"
 					each={courseDetails}
 					renderItem={(item) => (
-						<NavLink key={item.href} to={item.href}>
+						<NavLink key={item.title} to={item.href}>
 							{item.title}
 						</NavLink>
 					)}

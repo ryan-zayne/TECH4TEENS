@@ -6,13 +6,14 @@ import { Card } from "@/components/ui/card";
 import { cnJoin } from "@/lib/utils/cn";
 import { courseDetails } from "../-components/constants/course-details";
 import { Main } from "../-components/Main";
+import { WhatsAppLink } from "../-components/WhatsAppLink";
 
 function CourseDetailPage() {
 	const { name } = useParams();
 
 	const courseDetail = courseDetails.find((detail) => name && detail.href.endsWith(name));
 
-	if (!courseDetail) {
+	if (!courseDetail?.extraDetails) {
 		throw new Error("Course not found!");
 	}
 
@@ -53,7 +54,9 @@ function CourseDetailPage() {
 							each={courseDetail.extraDetails.objectives}
 							renderItem={(item) => (
 								<li key={item} className="flex items-start gap-2">
-									<IconBox icon="uil:check" className="shrink-0" />
+									<span className="size-4">
+										<IconBox icon="uil:check" className="size-full shrink-0" />
+									</span>
 									<p className="text-[12px]">{item}</p>
 								</li>
 							)}
@@ -61,8 +64,8 @@ function CourseDetailPage() {
 					</Card.Content>
 
 					<Card.Footer className="flex items-center justify-between">
-						<Card.Action as={Button} theme="primary-ghost">
-							Register
+						<Card.Action as={Button} theme="primary-ghost" asChild={true}>
+							<WhatsAppLink>Register</WhatsAppLink>
 						</Card.Action>
 
 						<span className="inline-flex items-center font-bold">
@@ -84,7 +87,9 @@ function CourseDetailPage() {
 					</figure>
 
 					<figure className="flex items-center gap-2">
-						<IconBox icon="mingcute:time-line" />
+						<span className="size-4">
+							<IconBox icon="mingcute:time-line" className="size-full shrink-0" />
+						</span>
 						<figcaption>Duration: {courseDetail.extraDetails.duration} </figcaption>
 					</figure>
 

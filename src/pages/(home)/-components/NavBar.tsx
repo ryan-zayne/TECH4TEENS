@@ -59,7 +59,7 @@ function MobileNavigation(props: { className?: string }) {
 					className="flex flex-col gap-4 pl-6 text-[12px] text-nowrap"
 					each={navLinkItems}
 					renderItem={(item) => (
-						<NavLink key={item.href} to={item.href} className="[.active]:text-tech4teens-primary">
+						<NavLink key={item.title} to={item.href} className="[.active]:text-tech4teens-primary">
 							{item.title}
 						</NavLink>
 					)}
