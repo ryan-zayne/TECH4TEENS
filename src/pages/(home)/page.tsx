@@ -27,13 +27,13 @@ function HomePage() {
 						src={heroBgOneDesktop}
 						height={587}
 						fetchPriority="high"
-						className="absolute inset-0 h-full mix-blend-multiply"
+						className="absolute inset-0 size-full mix-blend-multiply"
 					/>
 					<ImageResponsive
 						src={heroBgTwoDesktop}
 						height={587}
 						fetchPriority="high"
-						className="absolute inset-0 h-full mix-blend-multiply"
+						className="absolute inset-0 size-full mix-blend-multiply"
 					/>
 				</div>
 
@@ -60,7 +60,7 @@ function HomePage() {
 					</p>
 				</article>
 
-				<ImageResponsive className="mx-2 mt-7 h-[122px] w-full" src={heroImageDesktop} height={122} />
+				<ImageResponsive className="mt-7 h-[122px] w-full" src={heroImageDesktop} height={122} />
 
 				<div className="mt-8 flex w-full max-w-[300px] flex-col gap-3">
 					<Button theme="primary" size="full-width" asChild={true}>
@@ -72,7 +72,7 @@ function HomePage() {
 				</div>
 			</section>
 
-			<section className="mx-6 flex flex-col gap-7.5">
+			<section className="flex flex-col gap-7.5 px-6">
 				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
 					<h2 className="text-[14px] font-semibold" id="explore-courses">
 						Explore All Courses
@@ -112,7 +112,7 @@ function HomePage() {
 				</article>
 			</section>
 
-			<section className="mx-6 flex flex-col gap-7.5">
+			<section className="flex flex-col gap-7.5 px-6">
 				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
 					<h2 className="text-[14px] font-semibold" id="why-tech4teens">
 						Why Tech4Teens
@@ -193,7 +193,7 @@ function HomePage() {
 				</TabsAnimated.Root>
 			</section>
 
-			<section className="mx-6 flex flex-col gap-7.5">
+			<section className="flex flex-col gap-7.5 px-6">
 				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
 					<h2 className="text-[14px] font-semibold" id="faqs">
 						Frequently Asked Questions
