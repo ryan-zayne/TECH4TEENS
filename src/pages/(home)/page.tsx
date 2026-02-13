@@ -14,6 +14,7 @@ import { DropdownMenu } from "@/components/ui";
 import { Button } from "@/components/ui/button";
 import { courseDetails } from "./-components/constants/course-details";
 import { CourseCard } from "./-components/CourseCard";
+import { Faqs } from "./-components/Faqs";
 import { Main } from "./-components/Main";
 import { WhatsAppLink } from "./-components/WhatsAppLink";
 
@@ -218,13 +219,7 @@ function HomePage() {
 						/>
 					</figure>
 
-					<div
-						className="flex h-[72px] items-center gap-2 rounded-[8px] border
-							border-tech4teens-primary bg-[hsl(0,0%,96%)] px-4"
-					>
-						<span className="size-3 rounded-full bg-tech4teens-primary" />
-						<p>Who can enroll in Tech4Teens?</p>
-					</div>
+					<Faqs />
 				</article>
 			</section>
 
