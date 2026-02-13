@@ -4,15 +4,15 @@ export const navLinkItems = [
 		title: "Home",
 	},
 	{
-		href: "/courses",
+		href: "/#explore-courses",
 		title: "Explore Courses",
 	},
 	{
-		href: "/why-tech4teens",
+		href: "/#why-tech4teens",
 		title: "Why Tech4Teens",
 	},
 	{
-		href: "/faqs",
+		href: "/#faqs",
 		title: "FAQs",
 	},
 ];

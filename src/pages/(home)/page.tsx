@@ -64,15 +64,17 @@ function HomePage() {
 					<Button theme="primary" size="full-width" asChild={true}>
 						<WhatsAppLink>Register Your Child</WhatsAppLink>
 					</Button>
-					<Button theme="primary-ghost" size="full-width">
-						Make Enquiries
+					<Button theme="primary-ghost" size="full-width" asChild={true}>
+						<WhatsAppLink>Make Enquiries</WhatsAppLink>
 					</Button>
 				</div>
 			</section>
 
 			<section className="mx-6 flex flex-col gap-7.5">
 				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
-					<h2 className="text-[14px] font-semibold">Explore All Courses</h2>
+					<h2 className="text-[14px] font-semibold" id="explore-courses">
+						Explore All Courses
+					</h2>
 					<p className="text-[12px] text-tech4teens-sub-text-color">
 						Choose the right course to help your teen develop and advance their skills.
 					</p>
@@ -110,7 +112,9 @@ function HomePage() {
 
 			<section className="mx-6 flex flex-col gap-7.5">
 				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
-					<h2 className="text-[14px] font-semibold">Why Tech4Teens</h2>
+					<h2 className="text-[14px] font-semibold" id="why-tech4teens">
+						Why Tech4Teens
+					</h2>
 					<p className="text-[12px]">
 						Choose the right course to help your teen develop and advance their skills.
 					</p>
@@ -189,7 +193,9 @@ function HomePage() {
 
 			<section className="mx-6 flex flex-col gap-7.5">
 				<article className="flex max-w-[230px] flex-col gap-0.5 self-center text-center">
-					<h2 className="text-[14px] font-semibold">Frequently Asked Questions</h2>
+					<h2 className="text-[14px] font-semibold" id="faqs">
+						Frequently Asked Questions
+					</h2>
 					<p className="text-[12px]">Everything you need to know about Tech4Teens</p>
 				</article>
 
