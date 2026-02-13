@@ -25,14 +25,15 @@ function HomePage() {
 				<div className="absolute inset-0 isolate -z-1">
 					<ImageResponsive
 						src={heroBgOneDesktop}
-						alt=""
-						className="absolute inset-0 h-full object-cover mix-blend-multiply"
+						height={587}
+						fetchPriority="high"
+						className="absolute inset-0 h-full mix-blend-multiply"
 					/>
 					<ImageResponsive
 						src={heroBgTwoDesktop}
-						alt=""
+						height={587}
 						fetchPriority="high"
-						className="absolute inset-0 h-full object-cover mix-blend-multiply"
+						className="absolute inset-0 h-full mix-blend-multiply"
 					/>
 				</div>
 
