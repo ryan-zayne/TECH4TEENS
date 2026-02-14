@@ -4,7 +4,7 @@ import { NavBar } from "./-components/NavBar";
 
 function HomeLayout() {
 	return (
-		<div className="flex max-w-[402px] grow flex-col items-center self-center">
+		<div className="flex w-full max-w-[402px] grow flex-col items-center self-center">
 			<NavBar />
 			<Outlet />
 			<Footer />
