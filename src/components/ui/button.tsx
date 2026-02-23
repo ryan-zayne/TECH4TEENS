@@ -73,7 +73,7 @@ function Button<TElement extends React.ElementType = "button">(
 		theme,
 		type = "button",
 		unstyled,
-		...restOfButtonProps
+		...restOfProps
 	} = props;
 
 	const Component = asChild ? Slot.Root : Element;
@@ -111,12 +111,7 @@ function Button<TElement extends React.ElementType = "button">(
 
 	// == This technique helps prevents content shift when replacing children with spinner icon
 	return (
-		<Component
-			type={type}
-			className={BTN_CLASSES}
-			disabled={disabled || isDisabled}
-			{...restOfButtonProps}
-		>
+		<Component type={type} className={BTN_CLASSES} disabled={disabled || isDisabled} {...restOfProps}>
 			{isLoading ? withIcon : children}
 		</Component>
 	);

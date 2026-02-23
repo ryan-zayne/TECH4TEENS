@@ -11,7 +11,7 @@ import {
 	tutorSoftware,
 } from "@/assets/images/courses";
 
-const duration = "8 weeks";
+const duration = "12 weeks";
 
 export const courseDetails = defineEnumDeep([
 	{
