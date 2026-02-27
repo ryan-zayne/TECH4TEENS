@@ -74,25 +74,33 @@ function CourseDetailPage() {
 					</Card.Footer>
 				</Card.Root>
 
-				<article className="mt-8.5 flex flex-col gap-2 text-[12px]">
-					<figure className="flex items-center gap-2">
+				<article className="mt-4 flex flex-wrap gap-3 text-[12px] font-semibold">
+					<span
+						className="flex items-center gap-2 rounded-[8px] border border-[hsl(0,0%,76%)] bg-white
+							p-2.5"
+					>
+						Requirements: {courseDetail.extraDetails.requirements.join(", ")}
+					</span>
+
+					<figure
+						className="flex items-center gap-2 rounded-[8px] border border-[hsl(0,0%,76%)] bg-white
+							px-2 py-1.5"
+					>
 						<ImageResponsive
 							src={courseDetail.extraDetails.tutor.image}
-							height={36}
-							width={36}
-							className="size-9 rounded-[4px]"
+							height={24}
+							width={24}
+							className="size-6 rounded-[4px]"
 						/>
 						<figcaption>Tutor: {courseDetail.extraDetails.tutor.name}</figcaption>
 					</figure>
 
-					<figure className="flex items-center gap-2">
-						<span className="size-4">
-							<IconBox icon="mingcute:time-line" className="size-full shrink-0" />
-						</span>
-						<figcaption>Duration: {courseDetail.extraDetails.duration} </figcaption>
-					</figure>
-
-					<p>Requirements: {courseDetail.extraDetails.requirements.join(", ")}</p>
+					<span
+						className="flex items-center gap-2 rounded-[8px] border border-[hsl(0,0%,76%)] bg-white
+							p-2.5"
+					>
+						Duration: {courseDetail.extraDetails.duration}
+					</span>
 				</article>
 			</section>
 		</Main>
