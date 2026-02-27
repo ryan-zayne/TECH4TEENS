@@ -3,12 +3,13 @@ import {
 	heroBgOneDesktop,
 	heroBgTwoDesktop,
 	heroImageDesktop,
-	logoBig,
 	sectionBg,
 	tabImageOne,
+	tabImageThree,
+	tabImageTwo,
 } from "@/assets/images/landing";
 import { TabsAnimated } from "@/components/animated/ui";
-import { ForWithWrapper, IconBox, ImageResponsive } from "@/components/common";
+import { For, ForWithWrapper, IconBox, ImageResponsive } from "@/components/common";
 import { UserIcon } from "@/components/icons/UserIcon";
 import { DropdownMenu } from "@/components/ui";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,30 @@ import { CourseCard } from "./-components/CourseCard";
 import { Faqs } from "./-components/Faqs";
 import { Main } from "./-components/Main";
 import { WhatsAppLink } from "./-components/WhatsAppLink";
+
+const whyTech4TeensItems = [
+	{
+		description:
+			"Students will learn from experienced professionals who know how to teach teens in a way they can easily understand.",
+		image: tabImageOne,
+		title: "Learn from Experts",
+		value: "tab-1",
+	},
+	{
+		description:
+			"Students learn in real-time and can interact directly with tutors, ask questions, and get immediate feedback.",
+		image: tabImageTwo,
+		title: "Live Video Classes",
+		value: "tab-2",
+	},
+	{
+		description:
+			"Courses are hands-on with real projects and assessments, so teens build skills they can use even at a young age.",
+		image: tabImageThree,
+		title: "Practical Learning and Assessments",
+		value: "tab-3",
+	},
+] as const;
 
 function HomePage() {
 	return (
@@ -60,8 +85,6 @@ function HomePage() {
 					</p>
 				</article>
 
-				<ImageResponsive className="mt-7 h-[122px] w-full" src={heroImageDesktop} height={122} />
-
 				<div className="mt-8 flex w-full max-w-[300px] flex-col gap-3">
 					<Button theme="primary" size="full-width" asChild={true}>
 						<WhatsAppLink>Register Your Child</WhatsAppLink>
@@ -70,6 +93,8 @@ function HomePage() {
 						<WhatsAppLink>Make Enquiries</WhatsAppLink>
 					</Button>
 				</div>
+
+				<ImageResponsive className="mt-7 h-[122px] w-full" src={heroImageDesktop} height={122} />
 			</section>
 
 			<section className="flex flex-col gap-7.5 px-6">
@@ -124,30 +149,16 @@ function HomePage() {
 
 				<TabsAnimated.Root defaultValue="tab-1" className="gap-4">
 					<TabsAnimated.ContentList>
-						<TabsAnimated.Content value="tab-1">
-							<ImageResponsive
-								src={tabImageOne}
-								alt="Tab Image One"
-								height={266}
-								className="h-auto w-full rounded-[24px]"
-							/>
-						</TabsAnimated.Content>
-						<TabsAnimated.Content value="tab-2">
-							<ImageResponsive
-								src={tabImageOne}
-								alt="Tab Image One"
-								height={266}
-								className="h-auto w-full rounded-[24px]"
-							/>
-						</TabsAnimated.Content>
-						<TabsAnimated.Content value="tab-3">
-							<ImageResponsive
-								src={tabImageOne}
-								alt="Tab Image One"
-								height={266}
-								className="h-auto w-full rounded-[24px]"
-							/>
-						</TabsAnimated.Content>
+						{whyTech4TeensItems.map((item) => (
+							<TabsAnimated.Content key={item.value} value={item.value} className="h-[266px]">
+								<ImageResponsive
+									src={item.image}
+									alt={item.title}
+									height={266}
+									className="size-full rounded-[24px] object-cover"
+								/>
+							</TabsAnimated.Content>
+						))}
 					</TabsAnimated.ContentList>
 
 					<TabsAnimated.List
@@ -156,39 +167,20 @@ function HomePage() {
 							list: "flex-col gap-3 bg-transparent",
 						}}
 					>
-						<TabsAnimated.Trigger
-							value="tab-1"
-							className="flex-col items-start rounded-[12px] bg-[hsl(0,0%,95%)] px-6 py-3.5
-								text-left whitespace-normal"
-						>
-							<h3 className="text-[14px] font-semibold">Learn from Experts</h3>
-							<p className="text-[12px]">
-								Students will learn from experienced professionals who know how to teach teens in a
-								way they can easily understand.
-							</p>
-						</TabsAnimated.Trigger>
-						<TabsAnimated.Trigger
-							value="tab-2"
-							className="flex-col items-start rounded-[12px] bg-[hsl(0,0%,95%)] px-6 py-3.5
-								text-left whitespace-normal"
-						>
-							<h3 className="text-[14px] font-semibold">Live Video Classes</h3>
-							<p className="text-[12px]">
-								Students learn in real-time and can interact directly with tutors, ask questions,
-								and get immediate feedback.
-							</p>
-						</TabsAnimated.Trigger>
-						<TabsAnimated.Trigger
-							value="tab-3"
-							className="flex-col items-start rounded-[12px] bg-[hsl(0,0%,95%)] px-6 py-3.5
-								text-left whitespace-normal"
-						>
-							<h3 className="text-[14px] font-semibold">Practical Learning and Assessments</h3>
-							<p className="text-[12px]">
-								Courses are hands-on with real projects and assessments, so teens build skills they
-								can use even at a young age.
-							</p>
-						</TabsAnimated.Trigger>
+						<For
+							each={whyTech4TeensItems}
+							renderItem={(item) => (
+								<TabsAnimated.Trigger
+									key={item.value}
+									value={item.value}
+									className="flex-col items-start rounded-[12px] bg-[hsl(0,0%,95%)] px-6 py-3.5
+										text-left whitespace-normal"
+								>
+									<h3 className="text-[14px] font-semibold">{item.title}</h3>
+									<p className="text-[12px]">{item.description}</p>
+								</TabsAnimated.Trigger>
+							)}
+						/>
 					</TabsAnimated.List>
 				</TabsAnimated.Root>
 			</section>
@@ -201,27 +193,7 @@ function HomePage() {
 					<p className="text-[12px]">Everything you need to know about Tech4Teens</p>
 				</article>
 
-				<article className="flex flex-col gap-3 rounded-[24px] border border-[hsl(0,0%,76%)] p-3.5">
-					<figure
-						className="flex flex-col items-center gap-9 rounded-[16px] bg-[hsl(275,53%,45%)] px-3.5
-							py-7.5"
-					>
-						<figcaption className="max-w-[260px] text-[12px]/4 text-tech4teens-bg-color">
-							Tech4Teens is designed for teenagers between the ages of 13 and 19 who are interested
-							in learning practical tech skills. No prior experience is required, as all courses are
-							structured to start from the basics and gradually build confidence and competence.
-						</figcaption>
-
-						<ImageResponsive
-							src={logoBig}
-							width={300}
-							height={96}
-							className="h-[96px] w-full shrink-0"
-						/>
-					</figure>
-
-					<Faqs />
-				</article>
+				<Faqs />
 			</section>
 
 			<section className="relative isolate mx-6 flex flex-col items-center gap-6 px-6 py-8.5">

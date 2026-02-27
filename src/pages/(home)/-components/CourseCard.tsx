@@ -5,17 +5,17 @@ import { Card } from "@/components/ui/card";
 import { courseDetails } from "./constants/courseDetails";
 
 function CourseCard(props: (typeof courseDetails)[number]) {
-	const { description, href, image, price, title } = props;
+	const { availableSlots, description, href, image, price, title } = props;
 
 	return (
 		<Card.Root
 			key={title}
 			as="li"
-			className="flex flex-col gap-[18px] rounded-[24px] border border-tech4teens-footer-color p-5"
+			className="flex flex-col gap-4.5 rounded-[24px] border border-tech4teens-footer-color p-5"
 		>
 			<Card.Header className="relative">
 				<span className="absolute top-[52px] left-0 bg-tech4teens-secondary px-2.5 py-1 text-[11px]">
-					5 Slots Available
+					{availableSlots ? `${availableSlots} Slots Available` : "Coming Soon"}
 				</span>
 				<ImageResponsive
 					src={image}

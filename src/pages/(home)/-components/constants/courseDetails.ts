@@ -15,6 +15,7 @@ const duration = "12 weeks";
 
 export const courseDetails = defineEnumDeep([
 	{
+		availableSlots: 5,
 		description:
 			"Learn the fundamentals of basic computer tools including document creation, spreadsheets, and presentations using Microsoft applications.",
 		extraDetails: {
@@ -42,6 +43,7 @@ export const courseDetails = defineEnumDeep([
 		title: "Basic Computer Tools",
 	},
 	{
+		availableSlots: 5,
 		description:
 			"Master design basics and create stunning visuals using Photoshop, Illustrator, CorelDRAW, and more.",
 		extraDetails: {
@@ -70,6 +72,7 @@ export const courseDetails = defineEnumDeep([
 		title: "Graphic Designing & Branding",
 	},
 	{
+		availableSlots: 4,
 		description:
 			"Learn how to build software applications while developing strong problem-solving and logical thinking skills..",
 		extraDetails: {
@@ -97,6 +100,7 @@ export const courseDetails = defineEnumDeep([
 		title: "Software Development",
 	},
 	{
+		availableSlots: 5,
 		description:
 			"Learn how to write clear and persuasive content that communicates ideas effectively for storytelling and branding",
 		extraDetails: {
@@ -121,6 +125,7 @@ export const courseDetails = defineEnumDeep([
 		title: "Copy Writing",
 	},
 	{
+		availableSlots: 4,
 		description:
 			"Learn how to design mobile apps and websites that solve real-world problems in today’s tech industry.",
 		extraDetails: null,
@@ -130,6 +135,7 @@ export const courseDetails = defineEnumDeep([
 		title: "Digital Product Designing",
 	},
 	{
+		availableSlots: null,
 		description:
 			"Learn how to build AI workflows to automate tasks like data processing, report generation, and system monitoring.",
 		extraDetails: null,
