@@ -7,6 +7,7 @@ import {
 	courseThree,
 	courseTwo,
 	tutorBasic,
+	tutorCopyWriting,
 	tutorDesign,
 	tutorSoftware,
 } from "@/assets/images/courses";
@@ -115,7 +116,7 @@ export const courseDetails = defineEnumDeep([
 			],
 			requirements: ["A Laptop"],
 			tutor: {
-				image: tutorDesign,
+				image: tutorCopyWriting,
 				name: "Michael Ugochukwu",
 			},
 		},

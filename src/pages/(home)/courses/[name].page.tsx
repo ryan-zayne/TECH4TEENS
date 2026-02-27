@@ -4,9 +4,9 @@ import { ForWithWrapper, IconBox, ImageResponsive } from "@/components/common";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { cnJoin } from "@/lib/utils/cn";
-import { courseDetails } from "../-components/constants/courseDetails";
 import { Main } from "../-components/Main";
 import { WhatsAppLink } from "../-components/WhatsAppLink";
+import { courseDetails } from "../-constants/courseDetails";
 
 function CourseDetailPage() {
 	const { name } = useParams();

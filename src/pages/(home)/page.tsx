@@ -13,11 +13,11 @@ import { For, ForWithWrapper, IconBox, ImageResponsive } from "@/components/comm
 import { UserIcon } from "@/components/icons/UserIcon";
 import { DropdownMenu } from "@/components/ui";
 import { Button } from "@/components/ui/button";
-import { courseDetails } from "./-components/constants/courseDetails";
 import { CourseCard } from "./-components/CourseCard";
 import { Faqs } from "./-components/Faqs";
 import { Main } from "./-components/Main";
 import { WhatsAppLink } from "./-components/WhatsAppLink";
+import { courseDetails } from "./-constants/courseDetails";
 
 const whyTech4TeensItems = [
 	{

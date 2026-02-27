@@ -4,7 +4,7 @@ import { ForWithWrapper, IconBox, NavLink } from "@/components/common";
 import { Logo } from "@/components/common/Logo";
 import { Button } from "@/components/ui/button";
 import { cnJoin, cnMerge } from "@/lib/utils/cn";
-import { navLinkItems } from "./constants/navLinkItems";
+import { navLinkItems } from "../-constants/navLinkItems";
 
 function NavBar() {
 	const { isScrolled, observedElementRef } = useScrollObserver({

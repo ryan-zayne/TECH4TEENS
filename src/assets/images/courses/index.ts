@@ -7,3 +7,4 @@ export { default as courseSix } from "./course-six.png?responsive";
 export { default as tutorBasic } from "./tutor-basic.png?responsive";
 export { default as tutorSoftware } from "./tutor-software.png?responsive";
 export { default as tutorDesign } from "./tutor-design.png?responsive";
+export { default as tutorCopyWriting } from "./tutor-copywriting.png?responsive";

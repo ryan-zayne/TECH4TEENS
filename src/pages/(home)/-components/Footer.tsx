@@ -1,8 +1,8 @@
 import { NavLink } from "react-router";
 import { ForWithWrapper } from "@/components/common";
 import { Logo } from "@/components/common/Logo";
-import { courseDetails } from "./constants/courseDetails";
-import { navLinkItems } from "./constants/navLinkItems";
+import { courseDetails } from "../-constants/courseDetails";
+import { navLinkItems } from "../-constants/navLinkItems";
 
 function Footer() {
 	return (

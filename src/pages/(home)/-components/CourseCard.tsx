@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 import { IconBox, ImageResponsive } from "@/components/common";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { courseDetails } from "./constants/courseDetails";
+import { courseDetails } from "../-constants/courseDetails";
 
 function CourseCard(props: (typeof courseDetails)[number]) {
 	const { availableSlots, description, href, image, price, title } = props;
