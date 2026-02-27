@@ -108,7 +108,7 @@ function HomePage() {
 				</article>
 
 				<article className="flex flex-col gap-4">
-					<DropdownMenu.Root>
+					<DropdownMenu.Root modal={false}>
 						<DropdownMenu.Trigger asChild={true}>
 							<Button
 								theme="primary-ghost"
@@ -127,6 +127,27 @@ function HomePage() {
 								/>
 							</Button>
 						</DropdownMenu.Trigger>
+
+						<DropdownMenu.Content
+							className="flex min-w-[162px] flex-col gap-2 border-tech4teens-sub-text-color"
+						>
+							<DropdownMenu.Item className="text-[12px]">
+								Basic Computer Tools: Chisom M.
+							</DropdownMenu.Item>
+							<DropdownMenu.Item className="text-[12px]">
+								Graphic Design & Branding: Adibe J.
+							</DropdownMenu.Item>
+							<DropdownMenu.Item className="text-[12px]">
+								Copy Writing: Michael U.
+							</DropdownMenu.Item>
+							<DropdownMenu.Item className="text-[12px]">
+								Digital Product Designing: Sarah C.
+							</DropdownMenu.Item>
+							<DropdownMenu.Item className="text-[12px]">
+								Software Development: Zayne C.
+							</DropdownMenu.Item>
+							<DropdownMenu.Item className="text-[12px]">AI Automation: John U.</DropdownMenu.Item>
+						</DropdownMenu.Content>
 					</DropdownMenu.Root>
 
 					<ForWithWrapper
