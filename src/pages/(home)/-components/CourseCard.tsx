@@ -3,6 +3,7 @@ import { IconBox, ImageResponsive } from "@/components/common";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { courseDetails } from "../-constants/courseDetails";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 function CourseCard(props: (typeof courseDetails)[number]) {
 	const { availableSlots, description, href, image, price, title } = props;
@@ -34,7 +35,9 @@ function CourseCard(props: (typeof courseDetails)[number]) {
 
 			<Card.Footer className="flex items-center justify-between">
 				<Card.Action as={Button} theme="primary-ghost" asChild={true}>
-					<NavLink to={href}>See more</NavLink>
+					{title === "Digital Product Designing" ?
+						<WhatsAppLink />
+					:	<NavLink to={href}>See more</NavLink>}
 				</Card.Action>
 
 				<span className="inline-flex items-center font-bold">
