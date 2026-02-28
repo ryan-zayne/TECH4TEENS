@@ -43,6 +43,33 @@ const whyTech4TeensItems = [
 	},
 ] as const;
 
+const tutors = [
+	{
+		course: "Basic Computer Tools",
+		name: "Chisom M.",
+	},
+	{
+		course: "Graphic Design & Branding",
+		name: "Adibe J.",
+	},
+	{
+		course: "Copy Writing",
+		name: "Michael U.",
+	},
+	{
+		course: "Digital Product Designing",
+		name: "Sarah C.",
+	},
+	{
+		course: "Software Development",
+		name: "Zayne C.",
+	},
+	{
+		course: "AI Automation",
+		name: "John U.",
+	},
+] as const;
+
 function HomePage() {
 	return (
 		<Main className="gap-[54px] pb-[102px]">
@@ -116,10 +143,10 @@ function HomePage() {
 								className="max-w-[152px] justify-between border-tech4teens-sub-text-color
 									text-tech4teens-text-color"
 							>
-								<span className="inline-flex items-center gap-1">
+								<figure className="inline-flex items-center gap-1">
 									<UserIcon />
-									Instructors
-								</span>
+									<figcaption>Instructors</figcaption>
+								</figure>
 
 								<IconBox
 									icon="iconamoon:arrow-down-2"
@@ -131,22 +158,16 @@ function HomePage() {
 						<DropdownMenu.Content
 							className="flex min-w-[162px] flex-col gap-2 border-tech4teens-sub-text-color"
 						>
-							<DropdownMenu.Item className="text-[12px]">
-								Basic Computer Tools: Chisom M.
-							</DropdownMenu.Item>
-							<DropdownMenu.Item className="text-[12px]">
-								Graphic Design & Branding: Adibe J.
-							</DropdownMenu.Item>
-							<DropdownMenu.Item className="text-[12px]">
-								Copy Writing: Michael U.
-							</DropdownMenu.Item>
-							<DropdownMenu.Item className="text-[12px]">
-								Digital Product Designing: Sarah C.
-							</DropdownMenu.Item>
-							<DropdownMenu.Item className="text-[12px]">
-								Software Development: Zayne C.
-							</DropdownMenu.Item>
-							<DropdownMenu.Item className="text-[12px]">AI Automation: John U.</DropdownMenu.Item>
+							<For
+								each={tutors}
+								renderItem={(item) => (
+									<DropdownMenu.Item>
+										<p className="text-[12px]">
+											{item.course}: {item.name}
+										</p>
+									</DropdownMenu.Item>
+								)}
+							/>
 						</DropdownMenu.Content>
 					</DropdownMenu.Root>
 
