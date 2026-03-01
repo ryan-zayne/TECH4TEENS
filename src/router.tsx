@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router";
+import { SonnerToaster } from "./components/common/Toaster";
 import RootLayout from "./pages/layout";
 
 /* Layouts */
@@ -26,5 +27,11 @@ const routes = createRoutesFromElements(
 const browserRouter = createBrowserRouter(routes);
 
 export function Router() {
-	return <RouterProvider router={browserRouter} />;
+	return (
+		<>
+			<RouterProvider router={browserRouter} />
+
+			<SonnerToaster />
+		</>
+	);
 }

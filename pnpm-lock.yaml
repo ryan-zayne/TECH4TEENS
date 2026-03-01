@@ -19,13 +19,13 @@ importers:
         version: 0.12.43
       '@zayne-labs/toolkit-react':
         specifier: ^0.12.43
-        version: 0.12.43(@types/react@19.2.14)(react@19.2.4)(tailwind-merge@3.5.0)
+        version: 0.12.43(@types/react@19.2.14)(react@19.2.4)(tailwind-merge@3.5.0)(zustand@5.0.11(@types/react@19.2.14)(react@19.2.4)(use-sync-external-store@1.6.0(react@19.2.4)))
       '@zayne-labs/toolkit-type-helpers':
         specifier: ^0.12.43
         version: 0.12.43
       '@zayne-labs/ui-react':
         specifier: ^0.10.51
-        version: 0.10.51(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.5.0)(tailwindcss@4.2.1)
+        version: 0.10.51(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.5.0)(tailwindcss@4.2.1)(zustand@5.0.11(@types/react@19.2.14)(react@19.2.4)(use-sync-external-store@1.6.0(react@19.2.4)))
       motion:
         specifier: ^12.34.3
         version: 12.34.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -41,12 +41,18 @@ importers:
       react-router:
         specifier: ^7.13.1
         version: 7.13.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      sonner:
+        specifier: ^2.0.7
+        version: 2.0.7(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       tailwind-merge:
         specifier: ^3.5.0
         version: 3.5.0
       tailwind-variants:
         specifier: ^3.2.2
         version: 3.2.2(tailwind-merge@3.5.0)(tailwindcss@4.2.1)
+      zustand:
+        specifier: ^5.0.11
+        version: 5.0.11(@types/react@19.2.14)(react@19.2.4)(use-sync-external-store@1.6.0(react@19.2.4))
     devDependencies:
       '@eslint-react/eslint-plugin':
         specifier: ^2.13.0
@@ -3627,6 +3633,12 @@ packages:
     resolution: {integrity: sha512-iOBWFgUX7caIZiuutICxVgX1SdxwAVFFKwt1EvMYYec/NWO5meOJ6K5uQxhrYBdQJne4KxiqZc+KptFOWFSI9w==}
     engines: {node: '>=18'}
 
+  sonner@2.0.7:
+    resolution: {integrity: sha512-W6ZN4p58k8aDKA4XPcx2hpIQXBRAgyiWVkYhT7CvK6D3iAu7xjvVyhQHg2/iaKJZ1XVJ4r7XuwGL+WGEK37i9w==}
+    peerDependencies:
+      react: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+      react-dom: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
@@ -4049,6 +4061,24 @@ packages:
 
   zod@4.3.6:
     resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
+
+  zustand@5.0.11:
+    resolution: {integrity: sha512-fdZY+dk7zn/vbWNCYmzZULHRrss0jx5pPFiOuMZ/5HJN6Yv3u+1Wswy/4MpZEkEGhtNH+pwxZB8OKgUBPzYAGg==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      immer: '>=9.0.6'
+      react: '>=18.0.0'
+      use-sync-external-store: '>=1.2.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -5924,7 +5954,7 @@ snapshots:
     dependencies:
       '@zayne-labs/toolkit-type-helpers': 0.12.43
 
-  '@zayne-labs/toolkit-react@0.12.36(@types/react@19.2.14)(react@19.2.4)(tailwind-merge@3.5.0)':
+  '@zayne-labs/toolkit-react@0.12.36(@types/react@19.2.14)(react@19.2.4)(tailwind-merge@3.5.0)(zustand@5.0.11(@types/react@19.2.14)(react@19.2.4)(use-sync-external-store@1.6.0(react@19.2.4)))':
     dependencies:
       '@zayne-labs/toolkit-core': 0.12.36
       '@zayne-labs/toolkit-type-helpers': 0.12.36
@@ -5932,8 +5962,9 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.14
       react: 19.2.4
+      zustand: 5.0.11(@types/react@19.2.14)(react@19.2.4)(use-sync-external-store@1.6.0(react@19.2.4))
 
-  '@zayne-labs/toolkit-react@0.12.43(@types/react@19.2.14)(react@19.2.4)(tailwind-merge@3.5.0)':
+  '@zayne-labs/toolkit-react@0.12.43(@types/react@19.2.14)(react@19.2.4)(tailwind-merge@3.5.0)(zustand@5.0.11(@types/react@19.2.14)(react@19.2.4)(use-sync-external-store@1.6.0(react@19.2.4)))':
     dependencies:
       '@zayne-labs/toolkit-core': 0.12.43
       '@zayne-labs/toolkit-type-helpers': 0.12.43
@@ -5941,6 +5972,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.14
       react: 19.2.4
+      zustand: 5.0.11(@types/react@19.2.14)(react@19.2.4)(use-sync-external-store@1.6.0(react@19.2.4))
 
   '@zayne-labs/toolkit-type-helpers@0.12.36': {}
 
@@ -5950,10 +5982,10 @@ snapshots:
 
   '@zayne-labs/tsconfig@0.11.30': {}
 
-  '@zayne-labs/ui-react@0.10.51(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.5.0)(tailwindcss@4.2.1)':
+  '@zayne-labs/ui-react@0.10.51(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwind-merge@3.5.0)(tailwindcss@4.2.1)(zustand@5.0.11(@types/react@19.2.14)(react@19.2.4)(use-sync-external-store@1.6.0(react@19.2.4)))':
     dependencies:
       '@zayne-labs/toolkit-core': 0.12.36
-      '@zayne-labs/toolkit-react': 0.12.36(@types/react@19.2.14)(react@19.2.4)(tailwind-merge@3.5.0)
+      '@zayne-labs/toolkit-react': 0.12.36(@types/react@19.2.14)(react@19.2.4)(tailwind-merge@3.5.0)(zustand@5.0.11(@types/react@19.2.14)(react@19.2.4)(use-sync-external-store@1.6.0(react@19.2.4)))
       '@zayne-labs/toolkit-type-helpers': 0.12.36
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
@@ -7765,6 +7797,11 @@ snapshots:
       ansi-styles: 6.2.3
       is-fullwidth-code-point: 5.1.0
 
+  sonner@2.0.7(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+    dependencies:
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+
   source-map-js@1.2.1: {}
 
   spdx-exceptions@2.5.0: {}
@@ -8133,5 +8170,11 @@ snapshots:
   zod@3.22.4: {}
 
   zod@4.3.6: {}
+
+  zustand@5.0.11(@types/react@19.2.14)(react@19.2.4)(use-sync-external-store@1.6.0(react@19.2.4)):
+    optionalDependencies:
+      '@types/react': 19.2.14
+      react: 19.2.4
+      use-sync-external-store: 1.6.0(react@19.2.4)
 
   zwitch@2.0.4: {}

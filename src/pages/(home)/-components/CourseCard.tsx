@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import { toast } from "sonner";
 import { IconBox, ImageResponsive } from "@/components/common";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -7,6 +8,23 @@ import { WhatsAppLink } from "./WhatsAppLink";
 
 function CourseCard(props: (typeof courseDetails)[number]) {
 	const { availableSlots, description, href, image, price, title } = props;
+
+	const LinksTypes = {
+		"AI Automation": () => (
+			<NavLink
+				to={href}
+				onClick={(event) => {
+					event.preventDefault();
+					toast.info(
+						"This course is temporarily unavailable. You can check out other courses in the meantime."
+					);
+				}}
+			>
+				See more
+			</NavLink>
+		),
+		"Digital Product Designing": () => <WhatsAppLink>See more</WhatsAppLink>,
+	} satisfies Partial<Record<typeof title, () => React.ReactNode>>;
 
 	return (
 		<Card.Root
@@ -35,8 +53,8 @@ function CourseCard(props: (typeof courseDetails)[number]) {
 
 			<Card.Footer className="flex items-center justify-between">
 				<Card.Action as={Button} theme="primary-ghost" asChild={true}>
-					{title === "Digital Product Designing" ?
-						<WhatsAppLink />
+					{title in LinksTypes ?
+						LinksTypes[title as keyof typeof LinksTypes]()
 					:	<NavLink to={href}>See more</NavLink>}
 				</Card.Action>
 
