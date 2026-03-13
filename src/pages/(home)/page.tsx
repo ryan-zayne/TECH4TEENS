@@ -93,7 +93,12 @@ function HomePage() {
 					className="flex w-full max-w-[305px] items-center gap-1 rounded-[24px] bg-linear-to-r
 						from-[hsl(287,100%,95%)] to-[hsl(300,100%,97%)] py-1.5 pl-2"
 				>
-					<ImageResponsive src={groupPics} height={24} width={66} className="h-6 w-[66px]" />
+					<ImageResponsive
+						src={groupPics}
+						height={24}
+						width={66}
+						className="h-6 w-[66px] rounded-[12px]"
+					/>
 
 					<figcaption className="text-[8px] text-tech4teens-primary">
 						Join thousands of parents enroll your kids on Tech4Teen
@@ -121,7 +126,11 @@ function HomePage() {
 					</Button>
 				</div>
 
-				<ImageResponsive className="mt-7 h-[122px] w-full" src={heroImageDesktop} height={122} />
+				<ImageResponsive
+					className="mt-7 h-[122px] w-full rounded-[12px]"
+					src={heroImageDesktop}
+					height={122}
+				/>
 			</section>
 
 			<section className="flex flex-col gap-7.5 px-6">

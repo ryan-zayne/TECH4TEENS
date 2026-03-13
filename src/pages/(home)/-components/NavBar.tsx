@@ -25,9 +25,9 @@ function NavBar() {
 				isScrolled && "bg-tech4teens-bg-color shadow-[0_4px_6px_theme(--color-black/0.2)]"
 			)}
 		>
-			<Logo height={30} className="z-10 h-7.5 w-[74px]" />
+			<Logo height={30} className="z-10 h-7.5 w-[74px] rounded-[12px]" />
 
-			<MobileNavigation className="lg:hidden" />
+			<MobileNavigation />
 		</header>
 	);
 }
