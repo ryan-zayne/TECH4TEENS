@@ -14,7 +14,7 @@ import { UserIcon } from "@/components/icons/UserIcon";
 import { DropdownMenu } from "@/components/ui";
 import { Button } from "@/components/ui/button";
 import { CourseCard } from "./-components/CourseCard";
-import { Faqs } from "./-components/Faqs";
+import { FAQs } from "./-components/FAQs";
 import { Main } from "./-components/Main";
 import { WhatsAppLink } from "./-components/WhatsAppLink";
 import { courseDetails } from "./-constants/courseDetails";
@@ -214,7 +214,7 @@ function HomePage() {
 
 					<TabsAnimated.List
 						classNames={{
-							highlight: "-left-1 w-[20px] rounded-l-[12px] bg-tech4teens-primary shadow-none",
+							highlight: "-left-1 w-5 rounded-l-[12px] bg-tech4teens-primary shadow-none",
 							list: "flex-col gap-3 bg-transparent",
 						}}
 					>
@@ -244,7 +244,7 @@ function HomePage() {
 					<p className="text-[12px]">Everything you need to know about Tech4Teens</p>
 				</article>
 
-				<Faqs />
+				<FAQs />
 			</section>
 
 			<section className="relative isolate mx-6 flex flex-col items-center gap-6 px-6 py-8.5">

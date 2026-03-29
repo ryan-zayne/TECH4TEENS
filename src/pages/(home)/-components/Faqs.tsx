@@ -1,4 +1,5 @@
-import { useDragScroll } from "@zayne-labs/ui-react/ui/drag-scroll";
+/* eslint-disable unicorn/filename-case */
+import { DragScroll } from "@zayne-labs/ui-react/ui/drag-scroll";
 import { logoBig } from "@/assets/images/landing";
 import { For, ForWithWrapper, ImageResponsive } from "@/components/common";
 import { Tabs } from "@/components/ui";
@@ -31,9 +32,7 @@ const faqs = [
 	},
 ] as const;
 
-function Faqs() {
-	const { propGetters } = useDragScroll<HTMLDivElement>({});
-
+function FAQs() {
 	return (
 		<Tabs.Root defaultValue={faqs[0].question}>
 			<article className="flex flex-col gap-3 rounded-[24px] border border-[hsl(0,0%,76%)] p-3.5">
@@ -43,11 +42,11 @@ function Faqs() {
 				>
 					<ForWithWrapper
 						as="div"
-						className="min-h-[100px] max-w-[260px] text-[12px]/4 text-tech4teens-bg-color"
+						className="min-h-[100px] max-w-[260px]"
 						each={faqs}
 						renderItem={(item) => (
 							<Tabs.Content key={item.question} value={item.question} asChild={true}>
-								<p>{item.answer}</p>
+								<p className="text-[12px]/4 text-tech4teens-bg-color">{item.answer}</p>
 							</Tabs.Content>
 						)}
 					/>
@@ -60,37 +59,38 @@ function Faqs() {
 					/>
 				</figure>
 
-				<Tabs.List
-					unstyled={true}
-					{...propGetters.getRootProps({
-						className: "flex gap-3 h-[72px]",
-					})}
-				>
-					<For
-						each={faqs}
-						renderItem={(item) => (
-							<Tabs.Trigger
-								key={item.question}
-								unstyled={true}
-								value={item.question}
-								{...propGetters.getItemProps({
-									className: `h-full flex w-full max-w-[300px] shrink-0 cursor-pointer items-center
-												gap-2 rounded-[8px] border bg-[hsl(0,0%,96%)] px-4
-												border-tech4teens-primary`,
-								})}
-							>
-								<span
-									className="size-3 shrink-0 rounded-full bg-tech4teens-primary opacity-0
-										transition-opacity duration-300 in-data-[state=active]:opacity-100"
-								/>
-								<p>{item.question}</p>
-							</Tabs.Trigger>
-						)}
-					/>
-				</Tabs.List>
+				<DragScroll.Root>
+					<Tabs.List asChild={true} unstyled={true}>
+						<DragScroll.List className="flex h-[72px] gap-3">
+							<For
+								each={faqs}
+								renderItem={(item) => (
+									<Tabs.Trigger
+										key={item.question}
+										value={item.question}
+										asChild={true}
+										unstyled={true}
+									>
+										<DragScroll.Item
+											className="flex size-full max-w-[300px] shrink-0 cursor-pointer
+												items-center gap-2 rounded-[8px] border border-tech4teens-primary
+												bg-[hsl(0,0%,96%)] px-4"
+										>
+											<span
+												className="size-3 shrink-0 rounded-full bg-tech4teens-primary opacity-0
+													transition-opacity duration-300 in-data-[state=active]:opacity-100"
+											/>
+											<p>{item.question}</p>
+										</DragScroll.Item>
+									</Tabs.Trigger>
+								)}
+							/>
+						</DragScroll.List>
+					</Tabs.List>
+				</DragScroll.Root>
 			</article>
 		</Tabs.Root>
 	);
 }
 
-export { Faqs };
+export { FAQs };

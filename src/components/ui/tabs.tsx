@@ -14,7 +14,7 @@ function TabsRoot(props: InferProps<typeof TabsPrimitive.Root>) {
 	);
 }
 
-function TabList(props: InferProps<typeof TabsPrimitive.List> & { unstyled?: boolean }) {
+function TabsList(props: InferProps<typeof TabsPrimitive.List> & { unstyled?: boolean }) {
 	const { className, unstyled, ...restOfProps } = props;
 
 	return (
@@ -61,7 +61,7 @@ function TabsContent(props: InferProps<typeof TabsPrimitive.Content>) {
 	return (
 		<TabsPrimitive.Content
 			data-slot="tabs-content"
-			className={cnMerge("flex-1 outline-none", className)}
+			className={cnMerge("grow outline-none", className)}
 			{...restOfProps}
 		/>
 	);
@@ -69,7 +69,7 @@ function TabsContent(props: InferProps<typeof TabsPrimitive.Content>) {
 
 export const Root = TabsRoot;
 
-export const List = TabList;
+export const List = TabsList;
 
 export const Trigger = TabsTrigger;
 

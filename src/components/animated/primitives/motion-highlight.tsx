@@ -1,5 +1,5 @@
+/* eslint-disable react-x/set-state-in-effect */
 /* eslint-disable react-you-might-not-need-an-effect/no-derived-state */
-/* eslint-disable react-hooks/set-state-in-effect */
 /* eslint-disable react-x/no-unstable-default-props */
 "use client";
 
@@ -442,9 +442,7 @@ function MotionHighlightItem<T extends React.ElementType = "div">(props: Highlig
 		if (isActive) {
 			updateBounds();
 			setActiveClassName(activeClassName ?? "");
-		} else if (!activeValue) {
-			clearBounds();
-		}
+		} else if (!activeValue) clearBounds();
 
 		if (!shouldUpdateBounds) return;
 
@@ -518,6 +516,8 @@ function MotionHighlightItem<T extends React.ElementType = "div">(props: Highlig
 								layoutId={`transition-background-${contextId}`}
 								data-slot="motion-highlight"
 								style={{
+									position: "absolute",
+									zIndex: 0,
 									...contextStyle,
 									...style,
 								}}
@@ -579,6 +579,8 @@ function MotionHighlightItem<T extends React.ElementType = "div">(props: Highlig
 								layoutId={`transition-background-${contextId}`}
 								data-slot="motion-highlight"
 								style={{
+									position: "absolute",
+									zIndex: 0,
 									...contextStyle,
 									...style,
 								}}
