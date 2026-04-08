@@ -27,7 +27,7 @@
 	--breakpoint-xl: 1280px;
 
 	/* Fonts */
-	--font-geist: "Geist", sans-serif;
+	--font-geist-sans: "Geist", "Geist Fallback", sans-serif;
 
 	/* Animations */
 
@@ -195,7 +195,7 @@
 
 	body {
 		line-height: 1.5;
-		font-family: var(--font-geist);
+		font-family: var(--font-geist-sans);
 		color: var(--color-tech4teens-text-color);
 		background-color: var(--color-tech4teens-bg-color);
 	}
