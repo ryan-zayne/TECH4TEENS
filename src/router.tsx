@@ -8,8 +8,6 @@ const HomeLayout = lazy(() => import("./pages/(home)/layout"));
 
 const routes = createRoutesFromElements(
 	<Route Component={RootLayout}>
-		{/* eslint-disable react-x/no-nested-lazy-component-declarations */}
-
 		<Route path="/test" Component={lazy(() => import("./pages/page.test"))} />
 
 		<Route Component={HomeLayout}>
@@ -19,8 +17,6 @@ const routes = createRoutesFromElements(
 				Component={lazy(() => import("./pages/(home)/courses/[name].page"))}
 			/>
 		</Route>
-
-		{/* eslint-enable react-x/no-nested-lazy-component-declarations */}
 	</Route>
 );
 
